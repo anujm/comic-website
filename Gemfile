@@ -17,6 +17,8 @@ end
 
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'teaspoon'
+gem 'phantomjs'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'

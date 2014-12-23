@@ -1,0 +1,1 @@
+json.(comic, :name, :id)
