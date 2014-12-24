@@ -1,1 +1,1 @@
-json.(comic, :name, :id)
+json.(comic, :name, :id, :url)

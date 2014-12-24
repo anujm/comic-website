@@ -4,6 +4,6 @@ class ComicsController < ApplicationController
   end
 
   def show
-    @comic = Comic.find_by_id(params[:id]) || comic.last
+    @comic = Comic.find_by_id(params[:id]) || Comic.last
   end
 end
