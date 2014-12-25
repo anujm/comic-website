@@ -79,8 +79,7 @@ GEM
     mini_portile (0.6.1)
     minitest (5.5.0)
     multi_json (1.10.1)
-    mysql (2.9.1)
-    mysql (2.9.1-x86-mingw32)
+    mysql2 (0.3.17)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     nokogiri (1.6.5-x86-mingw32)
@@ -181,7 +180,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
-  mysql
+  mysql2
   phantomjs
   rails (= 4.1.8)
   rails_12factor

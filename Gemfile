@@ -23,7 +23,7 @@ gem 'phantomjs'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use postgres as the database for Active Record
-gem 'mysql'
+gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'sass', '3.2.19'
