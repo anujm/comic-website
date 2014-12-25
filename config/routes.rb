@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'comics#index'
   resources :recipes, only: [:index]
-  resources :comics, only: [:index, :show]
+  resources :comics, only: [:index, :show, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
