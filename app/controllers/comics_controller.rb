@@ -1,7 +1,8 @@
 class ComicsController < ApplicationController
 
   def index
-    @comic = Comic.first
+    @comic = Comic.new
+    @comic = Comic.last if Comic.count > 0 else
   end
 
   def show
