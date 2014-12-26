@@ -1,16 +1,26 @@
 class ComicsController < ApplicationController
+  respond_to :json, :html
 
   def index
-    @comic = Comic.new
-    @comic = Comic.last if Comic.count > 0 else
+    comic = Comic.new
+    comic = Comic.last if Comic.count > 0
+    respond_with comic
   end
 
   def show
-    @comic = Comic.find_by_id(params[:id]) || Comic.last
+    comic = Comic.find_by_id(params[:id]) || Comic.last
+    respond_with comic
   end
 
   def create
-    Comic.create(comic_params)
+    comic = Comic.create(comic_params)
+    respond_with comic
+  end
+
+  def random
+    random_id = rand(Comic.count) + 1
+    comic = Comic.find_by_id(random_id) || Comic.last
+    respond_with comic
   end
 
   private

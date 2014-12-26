@@ -9,7 +9,7 @@ comic_website.config([ '$routeProvider',
   ($routeProvider)->
     $routeProvider
     .when('/',
-      templateUrl: "show.html"
+      templateUrl: "index.html"
       controller: 'ComicsController'
     )
 ])

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'comics#index'
   resources :recipes, only: [:index]
+  get 'comics/random'=>'comics#random'
   resources :comics, only: [:index, :show, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.

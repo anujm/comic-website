@@ -51,12 +51,33 @@ end
     subject(:results) { JSON.parse(response.body) }
 
     context 'create' do
-      it 'should return 200 status' do
-        expect(response.status).to eq(200)
+      it 'should return 302 status' do
+        expect(response.status).to eq(302)
       end
 
       it 'should create a new comic' do
         expect(Comic.all.length).to eq(1)
+      end
+    end
+
+  end
+
+  describe 'random' do
+    before do
+      Comic.create!(id: 1, name: 'Comic 1', :url => 'www.example.com')
+      get :random, format: :json
+    end
+
+    subject(:results) { JSON.parse(response.body) }
+
+    context 'random' do
+      it 'should return 200 status' do
+        expect(response.status).to eq(200)
+      end
+
+      it 'should return a random comic' do
+
+        expect(results).to eq({})
       end
     end
 
